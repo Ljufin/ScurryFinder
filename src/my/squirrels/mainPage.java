@@ -51,9 +51,9 @@ public class mainPage extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("jButton3");
+        jButton3.setText("more");
 
-        jButton4.setText("jButton4");
+        jButton4.setText("features");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
