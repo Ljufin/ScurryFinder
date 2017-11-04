@@ -52,7 +52,7 @@ public class signupPage extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        singupButton = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         signupLoginBack = new javax.swing.JButton();
 
@@ -97,7 +97,12 @@ public class signupPage extends javax.swing.JFrame {
 
         jCheckBox3.setText("I agree to the terms and conditions");
 
-        jButton1.setText("Sign Up");
+        singupButton.setText("Sign Up");
+        singupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                singupButtonActionPerformed(evt);
+            }
+        });
 
         signupLoginBack.setText("<- Login");
         signupLoginBack.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +153,7 @@ public class signupPage extends javax.swing.JFrame {
                                             .addComponent(jTextField2)))
                                     .addComponent(jCheckBox3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(singupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -235,7 +240,7 @@ public class signupPage extends javax.swing.JFrame {
                         .addComponent(jCheckBox3)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(singupButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
 
@@ -248,6 +253,11 @@ public class signupPage extends javax.swing.JFrame {
         new loginPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_signupLoginBackActionPerformed
+
+    private void singupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singupButtonActionPerformed
+        new HomeScreen().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_singupButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,7 +295,6 @@ public class signupPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -313,5 +322,6 @@ public class signupPage extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton signupLoginBack;
+    private javax.swing.JButton singupButton;
     // End of variables declaration//GEN-END:variables
 }

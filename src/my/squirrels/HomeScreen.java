@@ -28,22 +28,32 @@ public class HomeScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        findgroupButton = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton2 = new javax.swing.JButton();
+        friendsButton = new javax.swing.JButton();
         settingsButton = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        myprofileButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("HOME");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("FIND GROUP");
-        jButton1.setToolTipText("");
+        findgroupButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        findgroupButton.setText("FIND GROUP");
+        findgroupButton.setToolTipText("");
+        findgroupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findgroupButtonActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText(" Friends");
+        friendsButton.setText(" Friends");
+        friendsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                friendsButtonActionPerformed(evt);
+            }
+        });
 
         settingsButton.setText(" Settings");
         settingsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +62,12 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("My Profile");
+        myprofileButton.setText("My Profile");
+        myprofileButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                myprofileButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,10 +80,10 @@ public class HomeScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(findgroupButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(friendsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(settingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(myprofileButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,13 +92,13 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(findgroupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(friendsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(settingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(myprofileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
@@ -94,6 +109,21 @@ public class HomeScreen extends javax.swing.JFrame {
         new settingsPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_settingsButtonActionPerformed
+
+    private void findgroupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findgroupButtonActionPerformed
+        new findGroupPage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_findgroupButtonActionPerformed
+
+    private void friendsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friendsButtonActionPerformed
+        new friendsPage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_friendsButtonActionPerformed
+
+    private void myprofileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myprofileButtonActionPerformed
+        new myprofilePage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_myprofileButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,11 +162,11 @@ public class HomeScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton findgroupButton;
+    private javax.swing.JButton friendsButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JButton myprofileButton;
     private javax.swing.JButton settingsButton;
     // End of variables declaration//GEN-END:variables
 }

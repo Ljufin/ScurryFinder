@@ -38,6 +38,11 @@ public class loginPage extends javax.swing.JFrame {
 
         signinButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         signinButton.setText("Sign In");
+        signinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signinButtonActionPerformed(evt);
+            }
+        });
 
         signupButton.setText("sign up");
         signupButton.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +107,11 @@ public class loginPage extends javax.swing.JFrame {
         new signupPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_signupButtonActionPerformed
+
+    private void signinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinButtonActionPerformed
+        new HomeScreen().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_signinButtonActionPerformed
 
     /**
      * @param args the command line arguments
