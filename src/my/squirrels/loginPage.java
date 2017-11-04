@@ -40,6 +40,11 @@ public class loginPage extends javax.swing.JFrame {
         signinButton.setText("Sign In");
 
         signupButton.setText("sign up");
+        signupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupButtonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("User ID:");
 
@@ -92,6 +97,11 @@ public class loginPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
+        new signupPage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_signupButtonActionPerformed
 
     /**
      * @param args the command line arguments
