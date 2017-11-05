@@ -27,13 +27,14 @@ public class settingsPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        chatButtonGroup = new javax.swing.ButtonGroup();
+        friendButtonGroup = new javax.swing.ButtonGroup();
+        searchButtonGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
@@ -68,26 +69,28 @@ public class settingsPage extends javax.swing.JFrame {
 
         jLabel3.setText("Notifications:");
 
-        jRadioButton1.setText("ON");
-
-        jRadioButton2.setText("OFF");
-
         jLabel4.setText("-> Chat:");
 
+        chatButtonGroup.add(jRadioButton3);
         jRadioButton3.setText("ON");
 
+        chatButtonGroup.add(jRadioButton4);
         jRadioButton4.setText("OFF");
 
         jLabel5.setText("-> New Friend:");
 
+        friendButtonGroup.add(jRadioButton5);
         jRadioButton5.setText("ON");
 
+        friendButtonGroup.add(jRadioButton6);
         jRadioButton6.setText("OFF");
 
         jLabel6.setText("-> Search Completed:");
 
+        searchButtonGroup.add(jRadioButton7);
         jRadioButton7.setText("ON");
 
+        searchButtonGroup.add(jRadioButton8);
         jRadioButton8.setText("OFF");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -127,11 +130,7 @@ public class settingsPage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton2)
-                .addGap(53, 53, 53))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(jSeparator4)
             .addComponent(jSeparator5)
@@ -201,12 +200,8 @@ public class settingsPage extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton2)
-                        .addComponent(jRadioButton1)))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -301,6 +296,8 @@ public class settingsPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backhomeButton;
+    private javax.swing.ButtonGroup chatButtonGroup;
+    private javax.swing.ButtonGroup friendButtonGroup;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -313,8 +310,6 @@ public class settingsPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
@@ -330,5 +325,6 @@ public class settingsPage extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JButton logoutButton;
+    private javax.swing.ButtonGroup searchButtonGroup;
     // End of variables declaration//GEN-END:variables
 }

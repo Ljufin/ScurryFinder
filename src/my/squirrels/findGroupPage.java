@@ -27,28 +27,31 @@ public class findGroupPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        locationButtonGroup = new javax.swing.ButtonGroup();
+        sizeButtonGroup = new javax.swing.ButtonGroup();
+        subjectBoxGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         backhomeButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
+        bibleBox = new javax.swing.JCheckBox();
+        engBox = new javax.swing.JCheckBox();
+        mathBox = new javax.swing.JCheckBox();
+        torreyBox = new javax.swing.JCheckBox();
+        physBox = new javax.swing.JCheckBox();
+        bioBox = new javax.swing.JCheckBox();
+        chemBox = new javax.swing.JCheckBox();
+        otherBox = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        commonsRadio = new javax.swing.JRadioButton();
+        fireplaceRadio = new javax.swing.JRadioButton();
+        libraryRadio = new javax.swing.JRadioButton();
+        fountainRadio = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
+        onethreeRadio = new javax.swing.JRadioButton();
+        foursixRadio = new javax.swing.JRadioButton();
+        sevenplusRadio = new javax.swing.JRadioButton();
         findgroupButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
@@ -67,43 +70,58 @@ public class findGroupPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Subject:");
 
-        jCheckBox1.setText("Bible");
+        subjectBoxGroup.add(bibleBox);
+        bibleBox.setText("Bible");
 
-        jCheckBox2.setText("English");
+        subjectBoxGroup.add(engBox);
+        engBox.setText("English");
 
-        jCheckBox3.setText("Math");
+        subjectBoxGroup.add(mathBox);
+        mathBox.setText("Math");
 
-        jCheckBox4.setText("Torrey");
+        subjectBoxGroup.add(torreyBox);
+        torreyBox.setText("Torrey");
 
-        jCheckBox5.setText("Phys");
+        subjectBoxGroup.add(physBox);
+        physBox.setText("Phys");
 
-        jCheckBox6.setText("Bio");
+        subjectBoxGroup.add(bioBox);
+        bioBox.setText("Bio");
 
-        jCheckBox7.setText("Chem");
+        subjectBoxGroup.add(chemBox);
+        chemBox.setText("Chem");
 
-        jCheckBox8.setText("Other");
+        subjectBoxGroup.add(otherBox);
+        otherBox.setText("Other");
 
         jLabel3.setText("*");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Location:");
 
-        jRadioButton1.setText("Commons");
+        locationButtonGroup.add(commonsRadio);
+        commonsRadio.setText("Commons");
 
-        jRadioButton2.setText("Fireplace");
+        locationButtonGroup.add(fireplaceRadio);
+        fireplaceRadio.setText("Fireplace");
 
-        jRadioButton3.setText("Library");
+        locationButtonGroup.add(libraryRadio);
+        libraryRadio.setText("Library");
 
-        jRadioButton4.setText("Fountain");
+        locationButtonGroup.add(fountainRadio);
+        fountainRadio.setText("Fountain");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Group Size:");
 
-        jRadioButton5.setText("1-3");
+        sizeButtonGroup.add(onethreeRadio);
+        onethreeRadio.setText("1-3");
 
-        jRadioButton6.setText("4-6");
+        sizeButtonGroup.add(foursixRadio);
+        foursixRadio.setText("4-6");
 
-        jRadioButton7.setText("7+");
+        sizeButtonGroup.add(sevenplusRadio);
+        sevenplusRadio.setText("7+");
 
         findgroupButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         findgroupButton.setText("Find Group");
@@ -136,21 +154,21 @@ public class findGroupPage extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jCheckBox1)
+                                        .addComponent(bibleBox)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox2)
+                                        .addComponent(engBox)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox3))
+                                        .addComponent(mathBox))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jCheckBox5)
+                                        .addComponent(physBox)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCheckBox6)
+                                        .addComponent(bioBox)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jCheckBox7)))
+                                        .addComponent(chemBox)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox8)
-                                    .addComponent(jCheckBox4)))
+                                    .addComponent(otherBox)
+                                    .addComponent(torreyBox)))
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
@@ -158,20 +176,20 @@ public class findGroupPage extends javax.swing.JFrame {
                                 .addComponent(jLabel6))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton3)
-                                    .addComponent(jRadioButton1))
+                                    .addComponent(libraryRadio)
+                                    .addComponent(commonsRadio))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton4)))
+                                    .addComponent(fireplaceRadio)
+                                    .addComponent(fountainRadio)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton5)
+                                .addComponent(onethreeRadio)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jRadioButton6)
+                                        .addComponent(foursixRadio)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton7))
+                                        .addComponent(sevenplusRadio))
                                     .addComponent(findgroupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
@@ -189,35 +207,35 @@ public class findGroupPage extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4))
+                    .addComponent(bibleBox)
+                    .addComponent(engBox)
+                    .addComponent(mathBox)
+                    .addComponent(torreyBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jCheckBox8))
+                    .addComponent(physBox)
+                    .addComponent(bioBox)
+                    .addComponent(chemBox)
+                    .addComponent(otherBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(commonsRadio)
+                    .addComponent(fireplaceRadio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(libraryRadio)
+                    .addComponent(fountainRadio))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7))
+                    .addComponent(onethreeRadio)
+                    .addComponent(foursixRadio)
+                    .addComponent(sevenplusRadio))
                 .addGap(29, 29, 29)
                 .addComponent(findgroupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 28, Short.MAX_VALUE))
@@ -232,8 +250,23 @@ public class findGroupPage extends javax.swing.JFrame {
     }//GEN-LAST:event_backhomeButtonActionPerformed
 
     private void findgroupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findgroupButtonActionPerformed
-        new resultsPage().setVisible(true);
-        this.setVisible(false);
+        
+        
+        // check the required fields
+        if (bibleBox.isSelected() || engBox.isSelected() || mathBox.isSelected()
+                || torreyBox.isSelected() || physBox.isSelected() 
+                || bioBox.isSelected() || chemBox.isSelected() 
+                || otherBox.isSelected()) {
+            
+            if (onethreeRadio.isSelected() || foursixRadio.isSelected()
+                    || sevenplusRadio.isSelected()) {
+                new resultsPage().setVisible(true);
+                this.setVisible(false); 
+            }       
+        }
+            
+                       
+            
     }//GEN-LAST:event_findgroupButtonActionPerformed
 
     /**
@@ -273,28 +306,31 @@ public class findGroupPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backhomeButton;
+    private javax.swing.JCheckBox bibleBox;
+    private javax.swing.JCheckBox bioBox;
+    private javax.swing.JCheckBox chemBox;
+    private javax.swing.JRadioButton commonsRadio;
+    private javax.swing.JCheckBox engBox;
     private javax.swing.JButton findgroupButton;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JRadioButton fireplaceRadio;
+    private javax.swing.JRadioButton fountainRadio;
+    private javax.swing.JRadioButton foursixRadio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JRadioButton libraryRadio;
+    private javax.swing.ButtonGroup locationButtonGroup;
+    private javax.swing.JCheckBox mathBox;
+    private javax.swing.JRadioButton onethreeRadio;
+    private javax.swing.JCheckBox otherBox;
+    private javax.swing.JCheckBox physBox;
+    private javax.swing.JRadioButton sevenplusRadio;
+    private javax.swing.ButtonGroup sizeButtonGroup;
+    private javax.swing.ButtonGroup subjectBoxGroup;
+    private javax.swing.JCheckBox torreyBox;
     // End of variables declaration//GEN-END:variables
 }
