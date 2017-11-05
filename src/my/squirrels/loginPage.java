@@ -94,8 +94,8 @@ public class loginPage extends javax.swing.JFrame {
                         .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(signinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addComponent(signupButton)
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {IDField, passField});
@@ -111,6 +111,11 @@ public class loginPage extends javax.swing.JFrame {
     private void signinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinButtonActionPerformed
         new HomeScreen().setVisible(true);
         this.setVisible(false);
+        
+        backEnd.set_username(IDField.getText());
+        backEnd.set_password(passField.getText());
+       
+        
     }//GEN-LAST:event_signinButtonActionPerformed
 
     /**

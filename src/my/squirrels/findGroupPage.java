@@ -49,7 +49,7 @@ public class findGroupPage extends javax.swing.JFrame {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        findgroupButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -105,8 +105,13 @@ public class findGroupPage extends javax.swing.JFrame {
 
         jRadioButton7.setText("7+");
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("Find Group");
+        findgroupButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        findgroupButton.setText("Find Group");
+        findgroupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findgroupButtonActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("*");
 
@@ -167,7 +172,7 @@ public class findGroupPage extends javax.swing.JFrame {
                                         .addComponent(jRadioButton6)
                                         .addGap(18, 18, 18)
                                         .addComponent(jRadioButton7))
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(findgroupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -214,7 +219,7 @@ public class findGroupPage extends javax.swing.JFrame {
                     .addComponent(jRadioButton6)
                     .addComponent(jRadioButton7))
                 .addGap(29, 29, 29)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(findgroupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 28, Short.MAX_VALUE))
         );
 
@@ -225,6 +230,11 @@ public class findGroupPage extends javax.swing.JFrame {
         new HomeScreen().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_backhomeButtonActionPerformed
+
+    private void findgroupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findgroupButtonActionPerformed
+        new resultsPage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_findgroupButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,7 +273,7 @@ public class findGroupPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backhomeButton;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton findgroupButton;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
