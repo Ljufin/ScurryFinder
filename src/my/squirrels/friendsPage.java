@@ -52,17 +52,17 @@ public class friendsPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/29053-200.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/squirrel-temp-icon.png"))); // NOI18N
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setText("Friend 1");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/29053-200.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/squirrel-temp-icon.png"))); // NOI18N
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton3.setText("Friend 2");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/29053-200.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/squirrel-temp-icon.png"))); // NOI18N
 
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton4.setText("Friend 3");

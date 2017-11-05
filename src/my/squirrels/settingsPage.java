@@ -260,6 +260,7 @@ public class settingsPage extends javax.swing.JFrame {
     }//GEN-LAST:event_backhomeButtonActionPerformed
 
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        new loginPage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_logoutButtonActionPerformed
 
