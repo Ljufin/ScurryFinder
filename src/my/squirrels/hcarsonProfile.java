@@ -9,12 +9,12 @@ package my.squirrels;
  *
  * @author Will
  */
-public class profilePage extends javax.swing.JFrame {
+public class hcarsonProfile extends javax.swing.JFrame {
 
     /**
      * Creates new form myprofilePage
      */
-    public profilePage() {
+    public hcarsonProfile() {
         initComponents();
     }
 
@@ -71,9 +71,12 @@ public class profilePage extends javax.swing.JFrame {
         jLabel7.setText("Global|");
 
         jTextField1.setEditable(false);
+        jTextField1.setText("Computer Science");
 
         jTextField2.setEditable(false);
+        jTextField2.setText("Junior");
 
+        jCheckBox1.setSelected(true);
         jCheckBox1.setEnabled(false);
 
         jCheckBox2.setEnabled(false);
@@ -81,10 +84,12 @@ public class profilePage extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/squirrel-temp-icon.png"))); // NOI18N
 
         jTextField3.setEditable(false);
+        jTextField3.setText("Female");
 
         jLabel9.setText("User ID|");
 
         jTextField4.setEditable(false);
+        jTextField4.setText("hcarson");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -212,21 +217,23 @@ public class profilePage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(profilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(hcarsonProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(profilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(hcarsonProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(profilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(hcarsonProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(profilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(hcarsonProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new profilePage().setVisible(true);
+                new hcarsonProfile().setVisible(true);
             }
         });
     }

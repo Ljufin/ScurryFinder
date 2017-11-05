@@ -16,6 +16,7 @@ public class signupPage extends javax.swing.JFrame {
      */
     public signupPage() {
         initComponents();
+        
     }
 
     /**
@@ -27,31 +28,33 @@ public class signupPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        yearButtonGroup = new javax.swing.ButtonGroup();
+        genderButtonGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        usernameField = new javax.swing.JTextField();
+        passField = new javax.swing.JPasswordField();
+        confrimField = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        majorField = new javax.swing.JTextField();
+        maleButton = new javax.swing.JRadioButton();
+        femaleButton = new javax.swing.JRadioButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        frButton = new javax.swing.JRadioButton();
+        soButton = new javax.swing.JRadioButton();
+        jrButton = new javax.swing.JRadioButton();
+        srButton = new javax.swing.JRadioButton();
+        torreyBox = new javax.swing.JCheckBox();
+        globalBox = new javax.swing.JCheckBox();
+        agreeBox = new javax.swing.JCheckBox();
         singupButton = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         signupLoginBack = new javax.swing.JButton();
@@ -77,9 +80,11 @@ public class signupPage extends javax.swing.JFrame {
 
         jLabel9.setText("Global");
 
-        jRadioButton1.setText("Male");
+        genderButtonGroup.add(maleButton);
+        maleButton.setText("Male");
 
-        jRadioButton2.setText("Female");
+        genderButtonGroup.add(femaleButton);
+        femaleButton.setText("Female");
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
@@ -87,15 +92,19 @@ public class signupPage extends javax.swing.JFrame {
         jTextArea1.setText("These are the terms and\nconditions. You may not sell\nthis app or make money from\nit in any way. If you try,\ngood luck. Also, certain\nfurry creatures were\nharmed in the making of\nthis app. If you take \noffence to this harsh\nreality, please refrain\nfrom using this app.");
         jScrollPane2.setViewportView(jTextArea1);
 
-        jRadioButton7.setText("FR");
+        yearButtonGroup.add(frButton);
+        frButton.setText("FR");
 
-        jRadioButton8.setText("SO");
+        yearButtonGroup.add(soButton);
+        soButton.setText("SO");
 
-        jRadioButton9.setText("JR");
+        yearButtonGroup.add(jrButton);
+        jrButton.setText("JR");
 
-        jRadioButton10.setText("SR");
+        yearButtonGroup.add(srButton);
+        srButton.setText("SR");
 
-        jCheckBox3.setText("I agree to the terms and conditions");
+        agreeBox.setText("I agree to the terms and conditions");
 
         singupButton.setText("Sign Up");
         singupButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,12 +139,12 @@ public class signupPage extends javax.swing.JFrame {
                                             .addComponent(jLabel9))
                                         .addGap(10, 10, 10)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox2)
+                                            .addComponent(globalBox)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jRadioButton1)
+                                                .addComponent(maleButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jRadioButton2))
-                                            .addComponent(jCheckBox1)))
+                                                .addComponent(femaleButton))
+                                            .addComponent(torreyBox)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel6)
@@ -143,15 +152,15 @@ public class signupPage extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jRadioButton7)
+                                                .addComponent(frButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jRadioButton8)
+                                                .addComponent(soButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jRadioButton9)
+                                                .addComponent(jrButton)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jRadioButton10))
-                                            .addComponent(jTextField2)))
-                                    .addComponent(jCheckBox3))
+                                                .addComponent(srButton))
+                                            .addComponent(majorField)))
+                                    .addComponent(agreeBox))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(singupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
@@ -166,22 +175,22 @@ public class signupPage extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1))
+                                        .addComponent(usernameField))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel3)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addComponent(jSeparator2)
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPasswordField1, jPasswordField2, jTextField1});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {confrimField, passField, usernameField});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel8, jLabel9});
 
@@ -198,53 +207,53 @@ public class signupPage extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(majorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton8)
-                            .addComponent(jRadioButton9)
-                            .addComponent(jRadioButton10))
+                            .addComponent(frButton)
+                            .addComponent(soButton)
+                            .addComponent(jrButton)
+                            .addComponent(srButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))
+                            .addComponent(maleButton)
+                            .addComponent(femaleButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
+                            .addComponent(torreyBox)
                             .addComponent(jLabel8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel9))
-                    .addComponent(jCheckBox2))
+                    .addComponent(globalBox))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCheckBox3)
+                        .addComponent(agreeBox)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(singupButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPasswordField1, jPasswordField2, jTextField1});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {confrimField, passField, usernameField});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -255,8 +264,41 @@ public class signupPage extends javax.swing.JFrame {
     }//GEN-LAST:event_signupLoginBackActionPerformed
 
     private void singupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singupButtonActionPerformed
-        new HomeScreen().setVisible(true);
-        this.setVisible(false);
+        
+        
+        // set the global user variables to what the user filled in
+        backEnd.set_username(usernameField.getText());
+        backEnd.set_password(passField.getText());
+        backEnd.set_major(majorField.getText());
+        
+        // figure out the buttons
+        if (frButton.isSelected())
+            backEnd.set_year("Freshman");
+        else if (soButton.isSelected())
+            backEnd.set_year("Sophomore");
+        else if (jrButton.isSelected())
+            backEnd.set_year("Junior");
+        else if (srButton.isSelected())
+            backEnd.set_year("Senior");
+        
+        if (maleButton.isSelected())
+            backEnd.set_gender("Male");
+        else if (femaleButton.isSelected())
+            backEnd.set_gender("Female");
+        
+        // check-boxes
+        if (torreyBox.isSelected())
+            backEnd.set_torrey(true);
+        if (globalBox.isSelected())
+            backEnd.set_global(true);
+        
+        // if the agree checkbox is selected then proceed
+        if (agreeBox.isSelected()) {
+            new HomeScreen().setVisible(true);
+            this.setVisible(false);
+        }
+            
+        
     }//GEN-LAST:event_singupButtonActionPerformed
 
     /**
@@ -295,9 +337,12 @@ public class signupPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox agreeBox;
+    private javax.swing.JPasswordField confrimField;
+    private javax.swing.JRadioButton femaleButton;
+    private javax.swing.JRadioButton frButton;
+    private javax.swing.ButtonGroup genderButtonGroup;
+    private javax.swing.JCheckBox globalBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -307,21 +352,20 @@ public class signupPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JRadioButton jrButton;
+    private javax.swing.JTextField majorField;
+    private javax.swing.JRadioButton maleButton;
+    private javax.swing.JPasswordField passField;
     private javax.swing.JButton signupLoginBack;
     private javax.swing.JButton singupButton;
+    private javax.swing.JRadioButton soButton;
+    private javax.swing.JRadioButton srButton;
+    private javax.swing.JCheckBox torreyBox;
+    private javax.swing.JTextField usernameField;
+    private javax.swing.ButtonGroup yearButtonGroup;
     // End of variables declaration//GEN-END:variables
 }
