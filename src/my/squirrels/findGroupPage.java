@@ -29,7 +29,6 @@ public class findGroupPage extends javax.swing.JFrame {
 
         locationButtonGroup = new javax.swing.ButtonGroup();
         sizeButtonGroup = new javax.swing.ButtonGroup();
-        subjectBoxGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         backhomeButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
@@ -70,28 +69,20 @@ public class findGroupPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Subject:");
 
-        subjectBoxGroup.add(bibleBox);
         bibleBox.setText("Bible");
 
-        subjectBoxGroup.add(engBox);
         engBox.setText("English");
 
-        subjectBoxGroup.add(mathBox);
         mathBox.setText("Math");
 
-        subjectBoxGroup.add(torreyBox);
         torreyBox.setText("Torrey");
 
-        subjectBoxGroup.add(physBox);
         physBox.setText("Phys");
 
-        subjectBoxGroup.add(bioBox);
         bioBox.setText("Bio");
 
-        subjectBoxGroup.add(chemBox);
         chemBox.setText("Chem");
 
-        subjectBoxGroup.add(otherBox);
         otherBox.setText("Other");
 
         jLabel3.setText("*");
@@ -330,7 +321,6 @@ public class findGroupPage extends javax.swing.JFrame {
     private javax.swing.JCheckBox physBox;
     private javax.swing.JRadioButton sevenplusRadio;
     private javax.swing.ButtonGroup sizeButtonGroup;
-    private javax.swing.ButtonGroup subjectBoxGroup;
     private javax.swing.JCheckBox torreyBox;
     // End of variables declaration//GEN-END:variables
 }

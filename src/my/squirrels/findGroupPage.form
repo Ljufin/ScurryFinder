@@ -6,8 +6,6 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="sizeButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="subjectBoxGroup">
-    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -194,7 +192,7 @@
     <Component class="javax.swing.JCheckBox" name="bibleBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bible"/>
       </Properties>
@@ -202,7 +200,7 @@
     <Component class="javax.swing.JCheckBox" name="engBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="English"/>
       </Properties>
@@ -210,7 +208,7 @@
     <Component class="javax.swing.JCheckBox" name="mathBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Math"/>
       </Properties>
@@ -218,7 +216,7 @@
     <Component class="javax.swing.JCheckBox" name="torreyBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Torrey"/>
       </Properties>
@@ -226,7 +224,7 @@
     <Component class="javax.swing.JCheckBox" name="physBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Phys"/>
       </Properties>
@@ -234,7 +232,7 @@
     <Component class="javax.swing.JCheckBox" name="bioBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bio"/>
       </Properties>
@@ -242,7 +240,7 @@
     <Component class="javax.swing.JCheckBox" name="chemBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Chem"/>
       </Properties>
@@ -250,7 +248,7 @@
     <Component class="javax.swing.JCheckBox" name="otherBox">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="subjectBoxGroup"/>
+          <ComponentRef name="default"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Other"/>
       </Properties>
