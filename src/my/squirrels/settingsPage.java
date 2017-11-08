@@ -99,7 +99,7 @@ public class settingsPage extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("Privacy:");
 
-        jButton1.setText("Change Pasword ->");
+        jButton1.setText("Change Password ->");
 
         jButton2.setText("Blocked Users ->");
 
