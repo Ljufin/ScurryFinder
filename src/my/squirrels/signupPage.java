@@ -5,6 +5,8 @@
  */
 package my.squirrels;
 
+import java.awt.Color;
+
 /**
  *
  * @author Will
@@ -38,9 +40,9 @@ public class signupPage extends javax.swing.JFrame {
         passField = new javax.swing.JPasswordField();
         confrimField = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        majorLabel = new javax.swing.JLabel();
+        yearLabel = new javax.swing.JLabel();
+        genderlabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         majorField = new javax.swing.JTextField();
@@ -58,23 +60,24 @@ public class signupPage extends javax.swing.JFrame {
         singupButton = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         signupLoginBack = new javax.swing.JButton();
+        errorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("SIGN UP");
 
-        jLabel2.setText("User Name");
+        jLabel2.setText("User ID");
 
-        jLabel3.setText("Password");
+        jLabel3.setText("Password*");
 
-        jLabel4.setText(" Confirm");
+        jLabel4.setText(" Confirm*");
 
-        jLabel5.setText("Major");
+        majorLabel.setText("Major*");
 
-        jLabel6.setText("Year");
+        yearLabel.setText("Year*");
 
-        jLabel7.setText("Gender");
+        genderlabel.setText("Gender*");
 
         jLabel8.setText("Torrey");
 
@@ -104,7 +107,12 @@ public class signupPage extends javax.swing.JFrame {
         yearButtonGroup.add(srButton);
         srButton.setText("SR");
 
-        agreeBox.setText("I agree to the terms and conditions");
+        agreeBox.setText("I agree");
+        agreeBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agreeBoxActionPerformed(evt);
+            }
+        });
 
         singupButton.setText("Sign Up");
         singupButton.addActionListener(new java.awt.event.ActionListener() {
@@ -124,70 +132,69 @@ public class signupPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator2)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSeparator1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel9))
-                                        .addGap(10, 10, 10)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(globalBox)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(maleButton)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(femaleButton))
-                                            .addComponent(torreyBox)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel5))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(frButton)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(soButton)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jrButton)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(srButton))
-                                            .addComponent(majorField)))
-                                    .addComponent(agreeBox))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(errorLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(singupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(genderlabel)
+                                .addGap(10, 10, 10)
+                                .addComponent(maleButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(femaleButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(yearLabel)
+                                    .addComponent(majorLabel))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(frButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(soButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jrButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(srButton))
+                                    .addComponent(majorField)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(10, 10, 10)
+                                .addComponent(torreyBox)
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel9)
+                                .addGap(10, 10, 10)
+                                .addComponent(globalBox))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(signupLoginBack)
-                                .addGap(49, 49, 49)
+                                .addGap(42, 42, 42)
                                 .addComponent(jLabel1))
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(usernameField))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(usernameField))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(agreeBox))
+                        .addGap(0, 22, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(jSeparator2)
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {confrimField, passField, usernameField});
@@ -203,54 +210,56 @@ public class signupPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(majorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(frButton)
-                            .addComponent(soButton)
-                            .addComponent(jrButton)
-                            .addComponent(srButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(maleButton)
-                            .addComponent(femaleButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(torreyBox)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel9))
-                    .addComponent(globalBox))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(passField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(confrimField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(majorLabel)
+                    .addComponent(majorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(yearLabel)
+                    .addComponent(frButton)
+                    .addComponent(soButton)
+                    .addComponent(jrButton)
+                    .addComponent(srButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(genderlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maleButton)
+                    .addComponent(femaleButton))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel9)
+                        .addComponent(globalBox))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel8))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(torreyBox)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(agreeBox)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(singupButton, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(agreeBox)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(singupButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(errorLabel)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {confrimField, passField, usernameField});
@@ -266,40 +275,101 @@ public class signupPage extends javax.swing.JFrame {
     private void singupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singupButtonActionPerformed
         
         
-        // set the global user variables to what the user filled in
-        backEnd.set_username(usernameField.getText());
-        backEnd.set_password(passField.getText());
-        backEnd.set_major(majorField.getText());
+        //reset all the fields to white
+        usernameField.setBackground(Color.white);
+        passField.setBackground(Color.white);
+        confrimField.setBackground(Color.white);
+        majorField.setBackground(Color.white);
+        yearLabel.setForeground(Color.black);
+        genderlabel.setForeground(Color.black);
         
-        // figure out the buttons
-        if (frButton.isSelected())
-            backEnd.set_year("Freshman");
-        else if (soButton.isSelected())
-            backEnd.set_year("Sophomore");
-        else if (jrButton.isSelected())
-            backEnd.set_year("Junior");
-        else if (srButton.isSelected())
-            backEnd.set_year("Senior");
-        
-        if (maleButton.isSelected())
-            backEnd.set_gender("Male");
-        else if (femaleButton.isSelected())
-            backEnd.set_gender("Female");
-        
-        // check-boxes
-        if (torreyBox.isSelected())
-            backEnd.set_torrey(true);
-        if (globalBox.isSelected())
-            backEnd.set_global(true);
         
         // if the agree checkbox is selected then proceed
         if (agreeBox.isSelected()) {
-            new HomeScreen().setVisible(true);
-            this.setVisible(false);
+            
+            // make sure all the required fields are filled out
+            String error_msg = "Please fill out required fields";
+            Boolean required = true;
+            if (usernameField.getText().equals("")) {
+                usernameField.setBackground(Color.red);
+                required = false;
+            }
+            
+            if (passField.getText().equals("")) {
+                passField.setBackground(Color.red);
+                required = false;
+            }
+            
+            if (confrimField.getText().equals("")) {
+                confrimField.setBackground(Color.red);
+                required = false;
+            }
+            
+            //check if passwords match
+            if(!passField.getText().equals(confrimField.getText())) {
+                passField.setBackground(Color.red);
+                confrimField.setBackground(Color.red);
+                required = false;
+            }
+            
+            if (majorField.getText().equals("")) {
+                majorField.setBackground(Color.red);
+                required = false;
+            }
+            
+            if (!frButton.isSelected()&&!soButton.isSelected()&&!jrButton.isSelected()&&!srButton.isSelected()) {
+                yearLabel.setForeground(Color.red);
+                required = false;
+            }
+            
+            if (!maleButton.isSelected()&&!femaleButton.isSelected()) {
+                genderlabel.setForeground(Color.red);
+                required = false;
+            }
+            
+            // if all the reuired fields are filled, then go ahead
+            if (required) {
+                
+                // set the global user variables to what the user filled in
+            backEnd.set_username(usernameField.getText());
+            backEnd.set_password(passField.getText());
+            backEnd.set_major(majorField.getText());
+        
+            // figure out the buttons
+            if (frButton.isSelected())
+                backEnd.set_year("Freshman");
+            else if (soButton.isSelected())
+                backEnd.set_year("Sophomore");
+            else if (jrButton.isSelected())
+                backEnd.set_year("Junior");
+            else if (srButton.isSelected())
+                backEnd.set_year("Senior");
+        
+            if (maleButton.isSelected())
+                backEnd.set_gender("Male");
+            else if (femaleButton.isSelected())
+                backEnd.set_gender("Female");
+        
+            // check-boxes
+            if (torreyBox.isSelected())
+                backEnd.set_torrey(true);
+            if (globalBox.isSelected())
+                    backEnd.set_global(true);
+                
+              new HomeScreen().setVisible(true);  
+              this.setVisible(false);
+            }
+                
+           // new HomeScreen().setVisible(true);
+           //this.setVisible(false);
         }
             
         
     }//GEN-LAST:event_singupButtonActionPerformed
+
+    private void agreeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agreeBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agreeBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,17 +409,16 @@ public class signupPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox agreeBox;
     private javax.swing.JPasswordField confrimField;
+    private javax.swing.JLabel errorLabel;
     private javax.swing.JRadioButton femaleButton;
     private javax.swing.JRadioButton frButton;
     private javax.swing.ButtonGroup genderButtonGroup;
+    private javax.swing.JLabel genderlabel;
     private javax.swing.JCheckBox globalBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
@@ -358,6 +427,7 @@ public class signupPage extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JRadioButton jrButton;
     private javax.swing.JTextField majorField;
+    private javax.swing.JLabel majorLabel;
     private javax.swing.JRadioButton maleButton;
     private javax.swing.JPasswordField passField;
     private javax.swing.JButton signupLoginBack;
@@ -367,5 +437,6 @@ public class signupPage extends javax.swing.JFrame {
     private javax.swing.JCheckBox torreyBox;
     private javax.swing.JTextField usernameField;
     private javax.swing.ButtonGroup yearButtonGroup;
+    private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
 }
